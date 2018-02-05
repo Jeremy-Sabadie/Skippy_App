@@ -1,0 +1,10 @@
+<h1>Secret App</h1>
+
+<% @users.each do |user| %>
+
+  <p><%= user.email %></p>
+  <p><a href="<%= user_path(user.id) %>" class="btn btn-primary">Show User</a></p>
+
+<% end %>
+
+<p><a href="<%= new_user_path %>" class="btn btn-default">Add New User</a></p>
